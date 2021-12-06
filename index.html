@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wechord.com - Note Streak</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/streak.css">
+</head>
+
+<body>
+
+
+    <div class='container mt-5'>
+
+        <div class='row justify-content-center'>
+            <div class='col-lg-6'>
+                <div class="streak_notice alert alert-info" role="alert">
+                    You have 30 seconds to guess as many notes on the keyboard as possible!
+                </div>
+            </div>
+        </div>
+
+        <div class='position-relative'>
+            <div class='precount display-1 position-absolute top-50 start-50 translate-middle'></div>
+        </div>
+        <div class='row justify-content-center'>
+            <div id='streak_viewer' class='col-lg-3'>
+                <div class='btn btn-success correct d-none'></div>
+                <div class='btn btn-danger incorrect d-none'></div>
+                <div class='display-1 current_note text-center mt-2'></div>
+                <ul id="piano" class='disable_piano noselect rounded'>
+
+                    <li class='key rounded shadow-sm' data-note='C'></li>
+
+                    <li class='key rounded shadow-sm' data-note='D'>
+                        <span class='key_sharp rounded text-white shadow-sm' data-note='C#'></span>
+                    </li>
+
+                    <li class='key rounded shadow-sm' data-note='E'>
+                        <span class='key_sharp rounded' data-note='D#'></span>
+                    </li>
+
+                    <li class='key rounded shadow-sm' data-note='F'></li>
+
+                    <li class='key rounded shadow-sm' data-note='G'>
+                        <span class='key_sharp rounded shadow-sm text-white' data-note='F#'></span>
+                    </li>
+
+                    <li class='key rounded shadow-sm' data-note='A'>
+                        <span class='key_sharp rounded shadow-sm' data-note='G#'></span>
+                    </li>
+
+                    <li class='key rounded shadow-sm' data-note='B'>
+                        <span class='key_sharp rounded shadow-sm' data-note='A#'></span>
+                    </li>
+
+                </ul>
+                <button id='streak_play' class='btn btn-lg btn-success float-end'><i
+                        class="fa-solid fa-gamepad-modern"></i> Play Note Streak!</button>
+                <button id='streak_end' class='d-none btn btn-light float-end'>End Game</button>
+                <div class='timer'></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/streak.js"></script>
+
+</body>
+
+</html>
